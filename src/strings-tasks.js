@@ -14,20 +14,8 @@ function isString(value) {
 function concatenateStrings(value1, value2) {
   return value1.concat(value2);
 }
-
-/**
- * Returns the first character of the given string.
- *
- * @param {string} value - The input string to extract the first character from.
- * @return {string} - The first character of the string.
- *
- * @example
- *   getFirstChar('John Doe') => 'J'
- *   getFirstChar('cat') => 'c'
- *   getFirstChar('') => ''
- */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+function getFirstChar(value) {
+  return value.charAt(0) || '';
 }
 
 /**
