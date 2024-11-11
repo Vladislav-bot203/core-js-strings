@@ -143,35 +143,18 @@ function reverseWords(str) {
   }
   return arr.join(' ');
 }
-
-/**
- * Inverts the case of each character in the given string.
- *
- * @param {string} str - The input string.
- * @returns {string} - The string with the case of each character inverted.
- *
- * @example
- *   invertCase('Hello, World!') =>  'hELLO, wORLD!'
- *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
- *   invertCase('12345') => '12345'
- */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+function invertCase(str) {
+  const arr = str.split('');
+  for (let i = 0; i < arr.length; ) {
+    if (arr[i] === arr[i].toUpperCase()) {
+      arr[i] = arr[i].toLowerCase();
+    } else {
+      arr[i] = arr[i].toUpperCase();
+    }
+    i += 1;
+  }
+  return arr.join('');
 }
-
-/**
- * Returns the result of string template and given parameters firstName and lastName.
- * Please do not use concatenation, use template string :
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
- *
- * @param {string} firstName - The first name to include in the template.
- * @param {string} lastName - The last name to include in the template.
- * @return {string} - The formatted string generated from the template.
- *
- * @example
- *   getStringFromTemplate('John','Doe') => 'Hello, John Doe!'
- *   getStringFromTemplate('Chuck','Norris') => 'Hello, Chuck Norris!'
- */
 function getStringFromTemplate(firstName, lastName) {
   return `Hello, ${firstName} ${lastName}!`;
 }
