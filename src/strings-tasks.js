@@ -92,37 +92,12 @@ function reverseString(str) {
   const reversedStr = str.split('');
   return reversedStr.reverse().join('');
 }
-
-/**
- * Returns a string with characters in alphabetical order.
- *
- * @param {string} str - The input string.
- * @return {string} - The string in alphabetical order.
- *
- * @example:
- *   orderAlphabetically('webmaster') => 'abeemrstw'
- *   orderAlphabetically('textbook') => 'bekoottx'
- *   orderAlphabetically('abc123xyz') => '123abcxyz'
- */
 function orderAlphabetically(str) {
   const arrToSort = str.split('');
   return arrToSort.sort().join('');
 }
-
-/**
- * Checks if a given string contains a specified substring.
- *
- * @param {string} str - The input string to search within.
- * @param {string} substring - The substring to check for in the input string.
- * @returns {boolean} - True if the input string contains the specified substring, false otherwise.
- *
- * @example
- *   containsSubstring('Hello, World!', 'World') => true
- *   containsSubstring('JavaScript is Fun', 'Python') => false
- *   containsSubstring('12345', '34') => true
- */
-function containsSubstring(/* str, substring */) {
-  throw new Error('Not implemented');
+function containsSubstring(str, substring) {
+  return str.includes(substring);
 }
 
 /**
