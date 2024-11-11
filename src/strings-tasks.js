@@ -119,21 +119,14 @@ function isPalindrome(str) {
       .replace(/[ ?!.,]/g, '')
   );
 }
-
-/**
- * Find the longest word in the sentence. If there are multiple longest words,
- * the function returns the first one encountered.
- *
- * @param {string} sentence - The input sentence.
- * @returns {string} - The longest word in the sentence.
- *
- * @example:
- *   findLongestWord('The quick brown fox') => 'quick'
- *   findLongestWord('A long and winding road') => 'winding'
- *   findLongestWord('No words here') => 'words'
- */
-function findLongestWord(/* sentence */) {
-  throw new Error('Not implemented');
+function findLongestWord(sentence) {
+  const arr = sentence.split(' ');
+  let long = '';
+  for (let i = 0; i < arr.length; ) {
+    if (long.length < arr[i].length) long = arr[i];
+    i += 1;
+  }
+  return long;
 }
 function reverseWords(str) {
   const arr = str.split(' ');
