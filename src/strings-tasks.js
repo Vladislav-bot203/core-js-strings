@@ -204,24 +204,14 @@ function extractNameFromTemplate(/* value */) {
 function unbracketTag(/* str */) {
   throw new Error('Not implemented');
 }
-
-/**
- * Extracts e-mails from single string with e-mails list delimited by semicolons
- *
- * @param {string} str - The input string.
- * @return {array} - The list of e-mails extracted from the string.
- *
- * @example
- *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'
- *   => [
- *      'angus.young@gmail.com',
- *      'brian.johnson@hotmail.com',
- *      'bon.scott@yahoo.com'
- *   ],
- *   'info@gmail.com' => ['info@gmail.com']
- */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  let arr = [];
+  if (str.includes(';')) {
+    arr = str.split(';');
+  } else {
+    arr[0] = str;
+  }
+  return arr;
 }
 
 /**
