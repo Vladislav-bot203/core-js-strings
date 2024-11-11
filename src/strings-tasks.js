@@ -35,23 +35,16 @@ function repeatString(str, times) {
   }
   return answer;
 }
-
-/**
- * Remove the first occurrence of a substring from a string.
- *
- * @param {string} str - The input string.
- * @param {string} value - The substring to remove from the string.
- * @return {string} - The string with the first occurrence of the substring removed.
- *
- * @example
- *   removeFirstOccurrences('To be or not to be', 'be') => 'To  or not to be'.
- *   removeFirstOccurrences('I like legends', 'end') => 'I like legs'.
- *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
- */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeFirstOccurrences(str, value) {
+  const index = str.indexOf(value);
+  let result = null;
+  if (index === -1) {
+    result = str;
+  } else {
+    result = str.slice(0, index) + str.slice(index + value.length);
+  }
+  return result;
 }
-
 /**
  * Remove the last occurrence of a substring from a string.
  *
