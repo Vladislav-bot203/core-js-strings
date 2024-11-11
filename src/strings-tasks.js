@@ -11,21 +11,8 @@ function isString(value) {
   const answer = typeof value === 'string' || value instanceof String;
   return answer;
 }
-
-/**
- * Returns the result of concatenation of two strings.
- *
- * @param {string} value1 - The first string to concatenate.
- * @param {string} value2 - The second string to concatenate.
- * @return {string} - The concatenated string.
- *
- * @example
- *   concatenateStrings('aa', 'bb') => 'aabb'
- *   concatenateStrings('aa', '') => 'aa'.
- *   concatenateStrings('', 'bb') => 'bb'
- */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  return value1.concat(value2);
 }
 
 /**
