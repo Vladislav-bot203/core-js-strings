@@ -108,22 +108,16 @@ function countVowels(str) {
   }, 0);
   return vowelsCount;
 }
-
-/**
- * Returns true if the string is a palindrome; otherwise false.
- * https://en.wikipedia.org/wiki/Palindrome
- *
- * @param {string} str - The input string.
- * @return {bool} - True if the string is a palindrome, false otherwise.
- *
- * @example:
- *   isPalindrome('madam') => true
- *   isPalindrome('racecar') => true
- *   isPalindrome('apple') => false
- *   isPalindrome('No lemon, no melon') => true
- */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  return (
+    str.toLowerCase().replace(/[ ?!.,]/g, '') ===
+    str
+      .split('')
+      .reverse()
+      .join('')
+      .toLowerCase()
+      .replace(/[ ?!.,]/g, '')
+  );
 }
 
 /**
