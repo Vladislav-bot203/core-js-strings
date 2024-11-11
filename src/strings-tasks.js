@@ -68,20 +68,8 @@ function sumOfCodes(str) {
 function startsWith(str, substr) {
   return str.startsWith(substr);
 }
-
-/**
- * Checks if a string ends with a specific substring.
- *
- * @param {string} str - The input string.
- * @param {string} substr - The substring to check.
- * @return {boolean} - Returns true if str starts with substr, false otherwise.
- *
- * @example:
- *   endsWith('Hello World', 'World') => true
- *   endsWith('Hello World', 'Hello') => false
- */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, substr) {
+  return str.endsWith(substr);
 }
 
 /**
