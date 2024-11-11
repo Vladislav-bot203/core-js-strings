@@ -17,20 +17,8 @@ function concatenateStrings(value1, value2) {
 function getFirstChar(value) {
   return value.charAt(0) || '';
 }
-
-/**
- * Removes leading and trailing whitespace characters from the string.
- *
- * @param {string} value - The input string to remove leading and trailing whitespaces from.
- * @return {string} - The string with leading and trailing whitespaces removed.
- *
- * @example
- *   removeLeadingAndTrailingWhitespaces('  Abracadabra') => 'Abracadabra'
- *   removeLeadingAndTrailingWhitespaces('cat ') => 'cat'
- *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
- */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value) {
+  return value.trim();
 }
 
 /**
