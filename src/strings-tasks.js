@@ -65,20 +65,8 @@ function sumOfCodes(str) {
   }
   return sum;
 }
-
-/**
- * Checks if a string starts with a specific substring.
- *
- * @param {string} str - The input string.
- * @param {string} substr - The substring to check.
- * @return {boolean} - Returns true if str starts with substr, false otherwise.
- *
- * @example:
- *   startsWith('Hello World', 'World') => false
- *   startsWith('Hello World', 'Hello') => true
- */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, substr) {
+  return str.startsWith(substr);
 }
 
 /**
