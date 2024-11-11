@@ -26,22 +26,14 @@ function removeLeadingWhitespaces(value) {
 function removeTrailingWhitespaces(value) {
   return value.trimEnd();
 }
-
-/**
- * Returns a string that is repeated the specified number of times.
- *
- * @param {string} str - The string to repeat.
- * @param {number} times - The number of times to repeat the string.
- * @return {string} - The result string.
- *
- * @example
- *   repeatString('A', 5) => 'AAAAA'
- *   repeatString('cat', 3) => 'catcatcat'
- *   repeatString('', 3) => ''
- *   repeatString('abc', -2) => ''
- */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
+function repeatString(str, times) {
+  let answer = null;
+  if (times < 0) {
+    answer = '';
+  } else {
+    answer = str.repeat(times);
+  }
+  return answer;
 }
 
 /**
