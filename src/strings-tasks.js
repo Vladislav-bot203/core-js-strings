@@ -135,19 +135,13 @@ function isPalindrome(str) {
 function findLongestWord(/* sentence */) {
   throw new Error('Not implemented');
 }
-
-/**
- * Returns the string where each word is reversed.
- *
- * @param {string} str - The input string.
- * @return {string} - The string where each word is reversed.
- *
- * @example:
- *   reverseWords('Hello World') => 'olleH dlroW'
- *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
- */
-function reverseWords(/* str */) {
-  throw new Error('Not implemented');
+function reverseWords(str) {
+  const arr = str.split(' ');
+  for (let i = 0; i < arr.length; ) {
+    arr[i] = arr[i].split('').reverse().join('');
+    i += 1;
+  }
+  return arr.join(' ');
 }
 
 /**
