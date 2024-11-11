@@ -1,26 +1,11 @@
-/* *******************************************************************************************
- *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String   *
- *                                                                                           *
- ******************************************************************************************* */
-
-/**
- * Returns the length of the given string.
- *
- * @param {string} value - The input string to calculate the length of.
- * @return {number} - The length of the string.
- *
- * @example
- *   getStringLength('aaaaa') => 5
- *   getStringLength('b') => 1
- *   getStringLength('') => 0
- *   getStringLength() => 0
- *   getStringLength(null) => 0
- *   getStringLength(undefined) => 0
- */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(value) {
+  let len = null;
+  if (value === undefined || value === null) {
+    len = 0;
+  } else {
+    len = value.length;
+  }
+  return len;
 }
 
 /**
