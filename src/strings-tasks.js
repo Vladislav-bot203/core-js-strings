@@ -189,20 +189,8 @@ function getStringFromTemplate(/* firstName, lastName */) {
 function extractNameFromTemplate(/* value */) {
   throw new Error('Not implemented');
 }
-
-/**
- * Remove the first and last angle brackets from tag string
- *
- * @param {string} str - The input tag.
- * @return {string} - The tag without the first and last angle brackets.
- *
- * @example
- *   unbracketTag('<div>') => 'div'
- *   unbracketTag('<span>') => 'span'
- *   unbracketTag('<a>') => 'a'
- */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  return str.replace(/[<>]/g, '');
 }
 function extractEmails(str) {
   let arr = [];
