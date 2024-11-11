@@ -88,19 +88,9 @@ function endsWith(str, substr) {
 function formatTime(/* minutes, seconds */) {
   throw new Error('Not implemented');
 }
-
-/**
- * Returns a string in reverse order.
- *
- * @param {string} str - The input string.
- * @return {string} - The string in reverse order.
- *
- * @example:
- *   reverseString('abcdef') => 'fedcba'
- *   reverseString('12345') => '54321'
- */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  const reversedStr = str.split('');
+  return reversedStr.reverse().join('');
 }
 
 /**
